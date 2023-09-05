@@ -1,11 +1,12 @@
 <div class="card" style="width: 18rem">
   <img
     class="card-img-top"
-    src="https://img.favpng.com/5/15/6/user-profile-lorem-ipsum-printing-png-favpng-y3YbvrPcrZsLkN2GTYgK2HDvT.jpg"
+    src="{{collegue?.photo}}"
     alt="Card image cap"
   />
   <div class="card-body">
-    <h5 class="card-title">Prenom</h5>
+    <h5 class="card-title">{{collegue?.pseudo}}</h5>
+    {{collegue?.score}}
     <p class="card-text"></p>
     <tc-like-hate> </tc-like-hate>
   </div>

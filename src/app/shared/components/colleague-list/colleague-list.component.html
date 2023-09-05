@@ -1,8 +1,5 @@
 <div>
-  <div *ngFor="let collegue of collegues" >
-    {{ collegue.pseudo }}
-    <tc-colleague [collegue]='collegue'>
-
-    </tc-colleague>
+  <div *ngFor="let collegue of collegues" class="m-1">
+    <tc-colleague [collegue]="collegue"> </tc-colleague>
   </div>
 </div>

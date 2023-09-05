@@ -8,4 +8,5 @@ import { Collegue } from 'src/app/models/collegue';
 })
 export class ColleagueComponent {
   @Input() collegue : Collegue | undefined;
+ // console.log(collegue)
 }
