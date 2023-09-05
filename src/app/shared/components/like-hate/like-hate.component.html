@@ -1,0 +1,5 @@
+<p class="m-1 p-1 ">
+  {{ score | score }}
+  <button [disabled]="score >= 1000" type="button" class="btn btn-primary m-2" (click)="onLike()">J'aime </button>
+  <button [disabled]="score <= -1000" type="button" class="btn btn-danger m-2" (click)="onHate()">Je deteste </button>
+</p>

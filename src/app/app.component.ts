@@ -1,3 +1,4 @@
+import { TestComponent } from './test/test.component';
 import { Component } from '@angular/core';
 
 @Component({
