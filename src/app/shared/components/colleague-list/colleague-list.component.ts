@@ -10,5 +10,5 @@ export class ColleagueListComponent {
 
   constructor(private ServiceCollegues: ColleagueService ) {
   }
-  collegues = this.ServiceCollegues.listCollegues
+  collegues = this.ServiceCollegues.listerCollegues();
 }

@@ -1,6 +1,6 @@
 <div>
   <h4>Historique</h4>
-  <div *ngFor="let vote of votes" class="m-2">
+  <div *ngFor="let vote of votes| async" class="m-2">
     <div class="row">
 
       <div class="col">

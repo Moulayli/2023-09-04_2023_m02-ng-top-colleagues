@@ -1,11 +1,32 @@
 import { Injectable } from '@angular/core';
+import axios from 'axios';
 import { Vote } from '../models/vote';
+
+const baseUrl =
+  'https://app-6f6e9c23-7f63-4d86-975b-a0b1a1440f94.cleverapps.io/api/v2';
 
 @Injectable({
   providedIn: 'root',
 })
 export class VoteService {
   constructor() {}
+
+  async listerColleguesParVotes()  {
+    try {
+      const response = await axios.get(baseUrl + "/votes");
+      if (response.status === 200) {
+        const collegues = response.data;
+        return collegues;
+      } else {
+        return [];
+      }
+    } catch (error) {
+      return [];
+    }
+  }
+
+
+
 
   listVote = [
     {
@@ -129,4 +150,5 @@ export class VoteService {
       created_date: '2023-09-06T00:07:19.522705Z',
     },
   ];
+
 }

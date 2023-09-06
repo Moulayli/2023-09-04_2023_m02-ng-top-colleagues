@@ -9,5 +9,5 @@ import { VoteService } from 'src/app/providers/vote.service';
 export class VotingHistoryComponent {
   constructor(private ServiceVotes: VoteService) {}
 
-  votes = this.ServiceVotes.listVote;
+  votes = this.ServiceVotes.listerColleguesParVotes();
 }
