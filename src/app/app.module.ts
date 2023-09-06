@@ -10,9 +10,21 @@ import { LikeHateComponent } from './shared/components/like-hate/like-hate.compo
 import { ColleagueComponent } from './shared/components/colleague/colleague.component';
 import { ScorePipe } from './shared/pipes/score.pipe';
 import { ColleagueListComponent } from './shared/components/colleague-list/colleague-list.component';
+import { VotingHistoryComponent } from './shared/components/voting-history/voting-history.component';
+import { WelcomePage } from './pages/welcome/welcome.page';
+
 
 @NgModule({
-  declarations: [AppComponent, TestComponent , LikeHateComponent,ColleagueComponent,ColleagueListComponent,ScorePipe],
+  declarations: [
+    AppComponent,
+    TestComponent,
+    LikeHateComponent,
+    ColleagueComponent,
+    ColleagueListComponent,
+    ScorePipe,
+    VotingHistoryComponent,
+    WelcomePage
+    ],
   imports: [BrowserModule, NgbModule, NgbCarouselModule, NgIf],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,5 +1,7 @@
-<div>
-  <div *ngFor="let collegue of collegues" class="m-1">
-    <tc-colleague [collegue]="collegue"> </tc-colleague>
+<div class="container">
+  <div class="row">
+    <div *ngFor="let collegue of collegues" class="col-sm-4 p-1">
+        <tc-colleague [collegue]="collegue"> </tc-colleague>
+    </div>
   </div>
 </div>

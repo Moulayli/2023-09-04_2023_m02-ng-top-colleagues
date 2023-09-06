@@ -33,6 +33,4 @@ export class ColleagueListComponent {
       score: 100,
     },
   ];
-
-
 }

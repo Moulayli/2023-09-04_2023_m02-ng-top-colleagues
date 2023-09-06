@@ -1,1 +1,23 @@
-<p>voting-history works!</p>
+<div>
+  <h4>Historique</h4>
+  <div *ngFor="let vote of votes" class="m-2">
+    <div class="row">
+
+      <div class="col">
+        <img src="{{ vote?.colleague?.photo }}" />
+      </div>
+      <div class="col">
+
+        <span>
+          {{ vote?.colleague?.pseudo }}
+        </span>
+        <p>
+          {{ vote?.colleague?.pseudo }} est
+          {{ vote?.like_hate === "LIKE" ? "aimé " : "détesté" }} elle a un score de
+          {{ vote?.score }} {{ vote?.like_hate === "LIKE" ? ":-) " : ":-(" }}
+        </p>
+        <button  type="button" class="btn btn-danger m-2" >Supprimer </button>
+      </div>
+    </div>
+  </div>
+</div>
