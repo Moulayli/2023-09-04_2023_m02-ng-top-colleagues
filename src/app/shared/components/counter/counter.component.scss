@@ -1,0 +1,22 @@
+
+
+.like, .hate {
+  display: flex;
+  align-items: center;
+}
+
+.like i, .hate i {
+  font-size: 24px;
+}
+
+.like span, .hate span {
+  margin-left: 10px;
+}
+
+.like i {
+  color: green;
+}
+
+.hate i {
+  color: red;
+}
