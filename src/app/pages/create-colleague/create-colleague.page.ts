@@ -1,46 +1,28 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ColleagueService } from 'src/app/providers/colleague.service';
+
+class Collegue {
+  pseudo: string | undefined;
+  last: string | undefined;
+  first: string | undefined;
+  photo: string | undefined;
+  score : number | undefined;
+
+}
 
 @Component({
   selector: 'tc-create-colleague',
   templateUrl: './create-colleague.page.html',
-  styleUrls: ['./create-colleague.page.scss']
+  styleUrls: ['./create-colleague.page.scss'],
 })
 export class CreateColleaguePage {
 
-  form: FormGroup;
-
-  constructor(private fb: FormBuilder) {
-    this.form = this.fb.group({
-      nom: ['', [Validators.required, Validators.minLength(2)]],
-      prenom: ['', [Validators.required, Validators.minLength(2)]],
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(6), Validators.maxLength(40)]]
-    });
+  constructor(private ServiceCollegues: ColleagueService ) {
   }
-
-  get nom() {
-    return this.form.get('nom');
+  monModel = new Collegue();
+  submit(): void {
+    this.ServiceCollegues.postColleague(this.monModel)
+    console.log(this.monModel);
   }
-
-  get prenom() {
-    return this.form.get('prenom');
-  }
-
-  get email() {
-    return this.form.get('email');
-  }
-
-  get password() {
-    return this.form.get('password');
-  }
-
-  onSubmit() {
-    if (this.form.valid) {
-      // Envoyer les données du formulaire au serveur
-      console.log(this.form.value);
-    }
-  }
-
-
 }

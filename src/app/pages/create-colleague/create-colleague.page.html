@@ -1,1 +1,15 @@
 <p>create-colleague works!</p>
+<h1>Formulaire piloté par le template</h1>
+
+<form tcFirstLastValidator (ngSubmit)="submit()" #form="ngForm">
+  <label>Pseudo</label>
+  <input [(ngModel)]="monModel.pseudo" name="pseudo" required >
+  <label>Nom</label>
+  <input [(ngModel)]="monModel.last" name="last" required minlength="2">
+  <label>Prenom</label>
+  <input [(ngModel)]="monModel.first" name="first" required minlength="2">
+  <label>Photo</label>
+  <input [(ngModel)]="monModel.photo" name="photo" required >
+  <input [(ngModel)]="monModel.score" name="score" required >
+  <button type="submit" [disabled]="!form.valid">Ajouter </button>
+</form>

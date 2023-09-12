@@ -28,7 +28,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     WelcomePage,
     CreateColleaguePage
     ],
-  imports: [BrowserModule, NgbModule, NgbCarouselModule, NgIf,ReactiveFormsModule ,CommonModule],
+  imports: [BrowserModule, NgbModule, NgbCarouselModule, NgIf,ReactiveFormsModule ,CommonModule ,FormsModule],
   providers: [],
   bootstrap: [AppComponent],
   //entryComponents: [TestComponent]

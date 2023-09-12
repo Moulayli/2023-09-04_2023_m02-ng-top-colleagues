@@ -25,6 +25,18 @@ export class ColleagueService {
     }
   }
 
+  async postColleague(colleague : any): Promise<boolean> {
+		console.log(colleague);
+    const response = await axios.post(baseUrl + "/colleagues" ,colleague);
+    if (response.status === 200) {
+      return true;
+    }
+    else  {
+      return false
+    }
+
+	}
+
 
   listCollegues: Collegue[] = [
     {
