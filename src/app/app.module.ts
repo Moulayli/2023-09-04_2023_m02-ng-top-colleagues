@@ -14,7 +14,9 @@ import { VotingHistoryComponent } from './shared/components/voting-history/votin
 import { WelcomePage } from './pages/welcome/welcome.page';
 import { CreateColleaguePage } from './pages/create-colleague/create-colleague.page';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { AppRoutingModule } from './app-routing.module';
+import { MenuPage } from './pages/menu/menu.page';
+import { PseudoCompomentPage } from './pages/pseudo-compoment/pseudo-compoment.page';
 
 @NgModule({
   declarations: [
@@ -26,9 +28,20 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ScorePipe,
     VotingHistoryComponent,
     WelcomePage,
-    CreateColleaguePage
-    ],
-  imports: [BrowserModule, NgbModule, NgbCarouselModule, NgIf,ReactiveFormsModule ,CommonModule ,FormsModule],
+    MenuPage,
+    CreateColleaguePage,
+    PseudoCompomentPage
+  ],
+  imports: [
+    BrowserModule,
+    NgbModule,
+    NgbCarouselModule,
+    NgIf,
+    ReactiveFormsModule,
+    CommonModule,
+    FormsModule,
+    AppRoutingModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
   //entryComponents: [TestComponent]

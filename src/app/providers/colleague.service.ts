@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Collegue } from '../models/collegue';
-import axios from "axios";
+import axios from 'axios';
 const baseUrl =
-  "https://app-6f6e9c23-7f63-4d86-975b-a0b1a1440f94.cleverapps.io/api/v2";
+  'https://app-6f6e9c23-7f63-4d86-975b-a0b1a1440f94.cleverapps.io/api/v2';
 
 @Injectable({
   providedIn: 'root',
@@ -10,33 +10,44 @@ const baseUrl =
 export class ColleagueService {
   constructor() {}
 
-  async listerCollegues()  {
+  async listerCollegues() {
     try {
-      const response = await axios.get(baseUrl + "/colleagues");
+      const response = await axios.get(baseUrl + '/colleagues');
       if (response.status === 200) {
         const collegues = response.data;
 
         return collegues;
       } else {
-        return "Erreur: la requête a échoué";
+        return 'Erreur: la requête a échoué';
       }
     } catch (error) {
       return `Erreur: ${error}`;
     }
   }
 
-  async postColleague(colleague : any): Promise<boolean> {
-		console.log(colleague);
-    const response = await axios.post(baseUrl + "/colleagues" ,colleague);
+  async postColleague(colleague: any): Promise<boolean> {
+    console.log(colleague);
+    const response = await axios.post(baseUrl + '/colleagues', colleague);
     if (response.status === 200) {
       return true;
+    } else {
+      return false;
     }
-    else  {
-      return false
+  }
+
+  async getCollegue(pseudo: any) : Promise<any> {
+    try {
+      const response = await axios.get(baseUrl + '/colleagues/' + pseudo);
+      if (response.status === 200) {
+        const collegue = response.data;
+        return collegue;
+      } else {
+        return 'Erreur: la requête a échoué';
+      }
+    } catch (error) {
+      return `Erreur: ${error}`;
     }
-
-	}
-
+  }
 
   listCollegues: Collegue[] = [
     {

@@ -1,9 +1,5 @@
-<div class="card" style="width: 18rem">
-  <img
-    class="card-img-top"
-    src="{{collegue?.photo}}"
-    alt="image-collegue"
-  />
+<div class="card" style="width: 18rem" routerLink="/colleague/{{collegue?.pseudo}}" routerLinkActive="active-link">
+  <img class="card-img-top" src="{{collegue?.photo}}" alt="image-collegue" />
   <div class="card-body">
     <h5 class="card-title">{{collegue?.pseudo}}</h5>
     {{collegue?.score}}

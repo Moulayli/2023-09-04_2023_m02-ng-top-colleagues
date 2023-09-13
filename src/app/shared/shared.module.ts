@@ -8,6 +8,7 @@ import { VotingHistoryComponent } from '../shared/components/voting-history/voti
 import { CounterComponent } from '../shared/components/counter/counter.component';
 import { CreateColleagueFormsComponent } from './components/create-colleague-forms/create-colleague-forms.component';
 import { FirstLastValidatorDirective } from './validators/first-last-validator.directive';
+import { CreateColleagueReactiveFormsComponent } from './components/create-colleague-reactive-forms/create-colleague-reactive-forms.component';
 
 
 
@@ -20,7 +21,8 @@ import { FirstLastValidatorDirective } from './validators/first-last-validator.d
     VotingHistoryComponent,
     CounterComponent,
     CreateColleagueFormsComponent,
-    FirstLastValidatorDirective
+    FirstLastValidatorDirective,
+    CreateColleagueReactiveFormsComponent
   ],
   imports: [
     CommonModule

@@ -1,15 +1,30 @@
-<p>create-colleague works!</p>
-<h1>Formulaire piloté par le template</h1>
+<h2>Formulaire piloté par le template</h2>
 
 <form tcFirstLastValidator (ngSubmit)="submit()" #form="ngForm">
-  <label>Pseudo</label>
-  <input [(ngModel)]="monModel.pseudo" name="pseudo" required >
-  <label>Nom</label>
-  <input [(ngModel)]="monModel.last" name="last" required minlength="2">
-  <label>Prenom</label>
-  <input [(ngModel)]="monModel.first" name="first" required minlength="2">
-  <label>Photo</label>
-  <input [(ngModel)]="monModel.photo" name="photo" required >
-  <input [(ngModel)]="monModel.score" name="score" required >
-  <button type="submit" [disabled]="!form.valid">Ajouter </button>
+  <div class="form-group">
+
+    <label>Pseudo</label>
+    <input [(ngModel)]="monModel.pseudo" name="pseudo" required>
+  </div>
+  <div class="form-group">
+
+    <label>Nom</label>
+    <input [(ngModel)]="monModel.last" name="last" required minlength="2">
+  </div>
+  <div class="form-group">
+
+    <label>Prenom</label>
+    <input [(ngModel)]="monModel.first" name="first" required minlength="2">
+  </div>
+  <div class="form-group">
+
+    <label>Photo</label>
+
+    <input [(ngModel)]="monModel.photo" name="photo" required>
+  </div>
+  <div class="form-group">
+    <label>Score initial</label>
+    <input [(ngModel)]="monModel.score" name="score" required>
+  </div>
+  <button type="submit" class="btn btn-primary" [disabled]="!form.valid">Ajouter </button>
 </form>
